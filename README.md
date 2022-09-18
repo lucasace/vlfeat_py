@@ -15,7 +15,7 @@ A python wrapper for the functions in vlfeat. Its not a wrapper on the [Vlfeat C
 To install the package, run the following command
 
 ```bash
-pip install -e git+https://github.com/lucasace/vlfeat_py.git#egginfo=vlfeat_py
+pip install -e git+https://github.com/lucasace/vlfeat_py.git#egg=vlfeat_py
 ```
 
 ### Usage
@@ -49,6 +49,18 @@ img = cv2.imread("path/to/image.jpg", cv2.IMREAD_GRAYSCALE)
 
 ```python
 [region_seeds, frames] = vl.mser_desc(img)
+```
+
+### HOG
+    
+```python
+hog_desc = vl.hog_desc(img, 32)
+```
+
+### LBP
+
+```python
+lbp_desc = vl.lbp_desc(img, 32)
 ```
 
 ## Contributing

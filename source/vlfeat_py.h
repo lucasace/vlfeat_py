@@ -4,11 +4,14 @@ extern "C"{
     #include<vl/sift.h>
     #include<vl/dsift.h>
     #include<vl/mser.h>
+    #include<vl/hog.h>
+    #include<vl/lbp.h>
 }
 
 #include <numpy/arrayobject.h>
 #include <numpy/ndarrayobject.h>
 #include<vector>
+#include<string>
 #include<pybind11/pybind11.h>
 #include<pybind11/eigen.h>
 #include<pybind11/stl.h>
@@ -38,3 +41,16 @@ py::tuple mser_desc(
     float max_variation = 0.25,
     float min_diversity = 0.2
 );
+
+py::array hog_desc(
+    py::array_t<float> img,
+    int cell_size,
+    std::string variant = "UoCTTI",
+    int num_orientations = 9
+);
+
+py::array lbp_desc(
+    py::array_t<float> img,
+    int cell_size
+);
+

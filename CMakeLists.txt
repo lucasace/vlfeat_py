@@ -65,6 +65,8 @@ pybind11_add_module(${target} MODULE
     source/sift/sift.cpp
     source/sift/dsift.cpp
     source/mser/mser.cpp
+    source/HoG/hog.cpp
+    source/lbp/lbp.cpp
 )
 
 
